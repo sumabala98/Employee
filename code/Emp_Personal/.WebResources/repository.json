@@ -1,0 +1,17 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/personalinformation.PersonalDetails-PersonalDetails.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/personalinformation.Personal_Information-Personal_Information.json",
+            "type": "generated"
+        }
+    ]
+}

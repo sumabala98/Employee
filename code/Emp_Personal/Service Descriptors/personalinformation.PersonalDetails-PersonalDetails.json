@@ -1,0 +1,98 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "PersonalDetails",
+    "description" : "PersonalDetails service"
+  },
+  "host" : "localhost:8070",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/personal" : {
+      "post" : {
+        "summary" : "postPersonalDetails",
+        "description" : "postPersonalDetails",
+        "operationId" : "post-personal",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/PeronalDetails"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Emp_Details_Res to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Emp_Details_Res"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Emp_Details_Res" : {
+      "type" : "object",
+      "properties" : {
+        "Res_Message" : {
+          "type" : "string"
+        },
+        "Res_Code" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PeronalDetails" : {
+      "type" : "object",
+      "required" : [ "EMP_ID", "Emp_Personal" ],
+      "properties" : {
+        "EMP_ID" : {
+          "type" : "string"
+        },
+        "Emp_Personal" : {
+          "$ref" : "#/definitions/Emp_Personal"
+        }
+      }
+    },
+    "Emp_Personal" : {
+      "type" : "object",
+      "required" : [ "FirstName", "Email_ID", "LastName" ],
+      "properties" : {
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "Email_ID" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "State" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "MobileNumber" : {
+          "type" : "string"
+        },
+        "DateOfBirth" : {
+          "type" : "string",
+          "format" : "date"
+        }
+      }
+    }
+  }
+}

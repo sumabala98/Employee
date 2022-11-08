@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/Emp_Personal/Service Descriptors/personalinformation.PersonalDetails-PersonalDetails.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/PersonalDetails"
+    },
+    {
+        "jsonSchemaLocation": "/Emp_Personal/Service Descriptors/personalinformation.Personal_Information-Personal_Information.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/PersonalDetails"
+    }
+]}
